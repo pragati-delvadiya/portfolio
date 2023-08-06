@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pragati Delvadiya - Web Developer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background:url(../../portfolio/header_bg.png) #ea6225 no-repeat; 
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        nav {
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+        }
+
+        .profile {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .profile img {
+			width: 350px;
+			height: 350px;
+			border-radius: 50%;
+			object-fit: cover;
+		}
+
+        .animated-text {
+            font-size: 24px;
+            margin-top: 10px;
+            animation: fadeInUp 2s ease;
+        }
+
+        .services {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+
+        .service {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .service img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+
+        .service-name {
+            margin-top: 10px;
+            font-size: 22px;
+        }
+
+        .get-in-touch {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .get-in-touch button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .email-section {
+            margin-top: 20px;
+        }
+
+        .email-section input {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .email-section button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            margin-left: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .email-section button:hover {
+            background-color: #0056b3;
+        }
+
+        .email-section input:focus {
+            outline: none;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+        <div class="profile">
+            <img src="G:\portfolio\pragati.jpeg" alt="Pragati Delvadiya">
+            <div class="animated-text">Pragati Delvadiya</div>
+        </div>
+        <div class="services">
+            <div class="service">
+                <img src="G:\portfolio\web" alt="Web Developer">
+                <div class="service-name">Web Developer</div>
+            </div>
+            <div class="service">
+                <img src="G:\portfolio\seo" alt="Search Engine Optimization">
+                <div class="service-name">Search Engine Optimization</div>
+            </div>
+            <div class="service">
+                <img src="G:\portfolio\digital marketing" alt="Digital Marketing">
+                <div class="service-name">Digital Marketing</div>
+            </div>
+        </div>
+        <div class="get-in-touch">
+            <button>Contact Me</button>
+            <div class="email-section">
+                <input type="email" placeholder="Enter your email">
+                <button>Subscribe</button>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 Pragati Delvadiya. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>

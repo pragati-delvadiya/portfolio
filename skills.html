@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pragati Delvadiya's Portfolio - Skills</title>
+    <style>
+        body {
+            margin: 15px;
+            padding: 10px;
+            background-color: black;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        header {
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+        }
+
+        .certificate-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .certificate-title {
+            font-size: 24px;
+            margin-top: 100px;
+        }
+
+        .certificate-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .certificate-container img {
+			margin-top: 50px;
+            max-width: 400px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        }
+
+        .certificate-number {
+            position: absolute;
+			margin-left: 10px;
+            top: 10px;
+            left: 10px;
+            font-size: 28px;
+            color: #FFC107;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 5px 10px;
+            border-radius: 5px;
+            animation: fadeInOut 2s infinite;
+        }
+
+        @keyframes fadeInOut {
+            0%, 100% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+
+        .next-button {
+		margin-top: 10px;
+            font-size: 36px;
+            color: #FFFFFF;
+            background-color: #365FA0;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 50px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+    </nav>
+
+    <section class="certificate-section" id="certificateSection">
+        <div class="certificate-title">SEO Content Writer Internship</div>
+        <div class="certificate-container">
+            <span class="certificate-number">1</span>
+            <img src="G:\portfolio\Pragati_Delvadiya_Hired_Certificate_page-0001.jpg" alt="Certificate 1">
+        </div>
+        <button class="next-button" onclick="showNextCertificate()">&#8250;</button>
+    </section>
+
+    <script>
+        const certificates = [
+            {
+                title: "SEO Content Writer Internship",
+                image: "G:\\portfolio\\Pragati_Delvadiya_Hired_Certificate_page-0001.jpg"
+            },
+            {
+                title: "Marketing Strategy SEO",
+                image: "G:\\portfolio\\Marketing strategy _ SEO content writing _page-0001.jpg"
+            },
+            {
+                title: "Nano Tips for Ranking Website in Google with Sam Dey (SEO)",
+                image: "G:\\portfolio\\LinkedIn Learning Certificate_page-0001.jpg"
+            },
+            {
+                title: "Marketing Tools: SEO",
+                image: "G:\\portfolio\\LinkedIn Learning Certificate (1)_page-0001.jpg"
+            },
+            {
+                title: "Introduction To HTML5: University Of Michigan",
+                image: "G:\\portfolio\\Coursera HTML5 michigan uni. (1)_page-0001.jpg"
+            },
+            {
+                title: "Introduction to Git And Github: Google",
+                image: "G:\\portfolio\\Coursera 6EQZXKSLM9JB (2)_page-0001.jpg"
+            },
+            {
+                title: "Laravel 9.0 Essential Training",
+                image: "G:\\portfolio\\CertificateOfCompletion_Laravel 9.0 Essential Training (1)_page-0001.jpg"
+            },
+            {
+                title: "AWS Academy Graduate - AWS Academy Machine Learning",
+                image: "G:\\portfolio\\AWS_Academy_Graduate___AWS_Academy_Machine_Learning_Foundations_Badge20230309-28-1s6qr61_page-0001.jpg"
+            }
+        ];
+
+        let currentCertificate = 0;
+        const certificateSection = document.getElementById("certificateSection");
+        const certificateTitle = certificateSection.querySelector(".certificate-title");
+        const certificateImage = certificateSection.querySelector(".certificate-container img");
+        const certificateNumber = certificateSection.querySelector(".certificate-number");
+
+        function showNextCertificate() {
+            currentCertificate++;
+            if (currentCertificate >= certificates.length) {
+                currentCertificate = 0;
+            }
+            updateCertificate();
+        }
+
+        function updateCertificate() {
+            certificateTitle.textContent = certificates[currentCertificate].title;
+            certificateImage.src = certificates[currentCertificate].image;
+            certificateNumber.textContent = (currentCertificate + 1).toString();
+        }
+
+        // Show the first certificate initially
+        updateCertificate();
+    </script>
+</body>
+</html>
